@@ -25,6 +25,7 @@ RUN set -x ; \
       nginx \
       ssl-cert \
       php-pear \
+      yaz \
       ${PHP_VERSION}-fpm \
       ${PHP_VERSION}-mysql \
       ${PHP_VERSION}-cgi \
@@ -44,8 +45,7 @@ RUN set -x ; \
 
 RUN set -x ; \
     wget $PMB_URL ; \
-    unzip pmb*.zip ; chown -R www-data:www-data /var/www/html
-    # rm pmb*.zip ; 
+    unzip pmb*.zip ; chown -R www-data:www-data /var/www/html; rm pmb*.zip ; 
     
 
 ADD default /etc/nginx/sites-available/
