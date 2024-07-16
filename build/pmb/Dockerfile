@@ -44,7 +44,9 @@ RUN set -x ; \
 
 RUN set -x ; \
     wget $PMB_URL ; \
-    unzip pmb7*.zip ; rm pmb7*.zip ; chown -R www-data:www-data /var/www/html
+    unzip pmb*.zip ; chown -R www-data:www-data /var/www/html
+    # rm pmb*.zip ; 
+    
 
 ADD default /etc/nginx/sites-available/
 
